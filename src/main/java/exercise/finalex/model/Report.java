@@ -25,10 +25,20 @@ public class Report {
     }
 
     public int repoCount() {
-        throw new NotImplementedException();
+        return repos.size();
     }
 
     public Optional<Repo> mostStarredRepo() {
-        throw new NotImplementedException();
+
+        Repo repoMostStarred = repos.get(0);
+
+        for(Repo repo : repos) {
+            if (repo.getStars() > repoMostStarred.getStars())
+                repoMostStarred = repo;
+        }
+
+        return Optional.of(repoMostStarred);
+
+
     }
 }

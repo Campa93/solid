@@ -27,6 +27,18 @@ public class Post {
         return author;
     }
 
+    public void printPost(){
+        System.out.println(this.getAuthor() + "\n" + this.getTitle() + "\n"+ this.getBody());
+    }
+
+    public String jsonFormat(){
+        return "{\n" +
+                "\t\"author\" : \"" + this.getAuthor() + "\",\n" +
+                "\t" + "\"title\" : \"" + this.getTitle() + "\",\n" +
+                "\t" + "\"body\" : \"" + this.getBody() + "\"\n" +
+                "}";
+    }
+
 
 
 }

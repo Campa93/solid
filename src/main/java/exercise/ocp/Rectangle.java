@@ -1,9 +1,10 @@
 package exercise.ocp;
 
-public class Rectangle {
+public class Rectangle implements GeometricFigures{
 
-    private final double height;
-    private final double width;
+    private double height;
+    private double width;
+
 
     public Rectangle(double width, double height) {
         this.width = width;
@@ -14,7 +15,19 @@ public class Rectangle {
         return height;
     }
 
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
     public double getWidth() {
         return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double area(){
+        return this.getWidth() * this.getHeight();
     }
 }
